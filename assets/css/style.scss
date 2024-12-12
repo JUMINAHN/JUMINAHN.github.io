@@ -1,0 +1,17 @@
+/* /assets/css/style.scss 파일 생성 */
+---
+---
+@import "{{ site.theme }}";
+
+/* 여기에 커스텀 CSS 추가 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
