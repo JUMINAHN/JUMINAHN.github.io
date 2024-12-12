@@ -1,17 +1,37 @@
-/* /assets/css/style.scss 파일 생성 */
 ---
 ---
 @import "{{ site.theme }}";
 
-/* 여기에 커스텀 CSS 추가 */
+/* 기본 레이아웃 */
+.blog-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* 글 스타일링 */
+.post-content {
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* 테이블 스타일링 */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 td, th {
+  padding: 0.8rem;
   border: 1px solid #ddd;
-  padding: 8px;
   text-align: left;
+}
+
+/* 코드 블록 스타일링 */
+pre.highlight {
+  padding: 1rem;
+  border-radius: 4px;
+  background: #f6f8fa;
+  overflow-x: auto;
 }
