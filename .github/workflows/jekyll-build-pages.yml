@@ -1,0 +1,23 @@
+name: Jekyll Build Pages
+
+# 워크플로우가 실행될 트리거 조건
+on:
+  push:
+    branches:
+      - master  # 또는 main
+
+# 동시성 제어
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# 실행할 작업 정의
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: .
+          destination: ./_site
