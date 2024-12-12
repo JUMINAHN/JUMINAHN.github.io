@@ -1,11 +1,11 @@
 name: Jekyll Build Pages
 
-# 워크플로우가 실행될 트리거 조건
+# 트리거 이벤트 정의
 on:
   push:
     branches:
-      - master  # 또는 main
-
+      - master
+  
 # 동시성 제어
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
