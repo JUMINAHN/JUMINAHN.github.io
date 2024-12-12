@@ -19,8 +19,8 @@ locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
 title                    : "TIL"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "JUMINAHN"
+subtitle                 : "TIL"
+name                     : "JUMIN AHN"
 description              : "Today I Learned"
 url                      : "https://JUMINAHN.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -66,11 +66,11 @@ reCaptcha:
   siteKey                :
   secret                 :
 atom_feed:
-  path                   : # blank (default) uses feed.xml
+  path                   : "feed.xml", # blank (default) uses feed.xml
   hide                   : # true, false (default)
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+search                   : true, # true, false (default)
+search_full_content      : true,  #true, false (default)
+search_provider          : lunr, # lunr (default), algolia, google
 lunr:
   search_within_pages    : # true, false (default)
 algolia:
