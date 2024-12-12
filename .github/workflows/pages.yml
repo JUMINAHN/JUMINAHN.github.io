@@ -1,7 +1,22 @@
 name: Pages
 
-concurrency: 
-  group: "pages"
+# 트리거 이벤트 정의
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:  # 수동 실행도 가능하게 설정
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-# 여기에 나머지 워크플로우 설정을 추가하세요
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: .
+          destination: ./_site
