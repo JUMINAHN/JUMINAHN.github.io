@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List with Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>로그인</h1>
+    <input type="text" class="username" placeholder="사용자 이름">
+    <input type="password" class="password" placeholder="비밀번호">
+    <button class="loginBtn">로그인</button>
+    <button class="registerBtn">회원가입</button>
+    <p id="loginStatus"></p>
+  </div>
+
+  <div class="timer"></div>
+
+  <div class="todoList" style="display: none;">
+    <section class="todoInputSection">
+      <h1>TodoList</h1>
+      <input type="text" class="todoListInput">
+      <button class="todoListBtn">추가</button>
+    </section>
+    <section class="todoSection">
+      <ul class="todoListSection"></ul>
+    </section>
+  </div>
+
+  <div class="position">
+    <p id="status"></p>
+  </div>
+
+  <script src="main.js" type="module"></script>
+</body>
+</html>
